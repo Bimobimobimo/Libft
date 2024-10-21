@@ -1,44 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 11:03:59 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:59 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/20 10:43:35 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/20 11:02:27 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	int		i;
+	int		j;
+	char	*joined_str;
 
 	i = 0;
-	ptr = (unsigned char *) s;
-	while (i < n)
+	j = 0;
+	while (s1[i])
+		i++;
+	joined_str = malloc(i + ft_strlen(s2) + 1);
+	if (joined_str == NULL)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		ptr[i] = (unsigned char)c;
+		joined_str[i] = s1[i];
 		i++;
 	}
-	return (s);
+	while (s2[j])
+	{
+		joined_str[i] = s2[j];
+		i++;
+		j++;
+	}
+	joined_str[i] = '\0';
+	return (joined_str);
 }
 
 /* int	main(void)
 {
-	int s[10] = {0};
-	int c = 1;
-	size_t n = 3;
-	ft_memset(s, c, n);
-	
-	int i = 0;
-	while (i < 10)
-	{
-		printf ("%d ", s[i]);
-		i++;
-	}
+	const char	s1[100] = "Born T";
+	const char	s2[100] = "o Code";
+	char	*res = ft_strjoin(s1, s2);
+	printf ("%s\n", res);
+	free (res);
 	return (0);
 } */

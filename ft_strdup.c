@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 14:05:04 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:08 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/18 18:13:20 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/19 16:01:06 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *s)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	char	*dup;
+	int		i;
+	int		len;
+
+	i = 0;
+	len = ft_strlen(s);
+	dup = malloc(len + 1);
+	if (dup == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }
 
-/* int main()
+/* int	main(void)
 {
-	int car;
+	const char	*s = "to duplicate";
+	char	*dup;
 
-	car = 'n';
-	printf ("ft_isalpha : %d\n", ft_isalpha(car));
+	dup = ft_strdup(s);
+	printf ("Original string   : %s\n", s);
+	printf ("Duplicated string : %s\n", dup);
+	free(dup);
 	return (0);
 } */

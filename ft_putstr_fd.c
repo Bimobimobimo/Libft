@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 14:05:04 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:08 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/20 17:46:06 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/20 18:07:55 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	int	len;
+
+	len = ft_strlen(s);
+	write(fd, s, len);
 }
 
-/* int main()
+/* int	main(void)
 {
-	int car;
+	int		fd;
+	char	str[100] = "Hello";
 
-	car = 'n';
-	printf ("ft_isalpha : %d\n", ft_isalpha(car));
+	fd = 1;
+	ft_putstr_fd(str, fd);
 	return (0);
 } */

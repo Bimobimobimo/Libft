@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 14:05:04 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:08 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/20 18:09:33 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/20 18:21:20 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	long	nbre;
+
+	nbre = nb;
+	if (nbre < 0)
+	{
+		write (fd, "-", 1);
+		nbre = -nbre;
+	}
+	if (nbre > 9)
+	{
+		ft_putnbr_fd(nbre / 10, fd);
+		ft_putnbr_fd(nbre % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(nbre + '0', fd);
+	}
 }
 
-/* int main()
+/* int	main(void)
 {
-	int car;
+	int	nb;
+	int	fd;
 
-	car = 'n';
-	printf ("ft_isalpha : %d\n", ft_isalpha(car));
+	nb = -142;
+	fd = 1;
+	ft_putnbr_fd(nb, fd);
 	return (0);
 } */

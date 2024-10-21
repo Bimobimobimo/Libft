@@ -6,11 +6,11 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:02:15 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/15 15:48:49 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:00:49 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
