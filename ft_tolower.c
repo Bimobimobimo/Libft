@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:27:14 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:30 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:51:51 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	ft_tolower(int c)
 	int c;
 
 	c = 'H';
-	printf ("ft_tolower : %c\n", ft_tolower(c));
+	printf ("ft_tolower : %c becomes %c\n", c, ft_tolower(c));
 	return (0);
 } */

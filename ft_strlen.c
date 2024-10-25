@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:09:18 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:18 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:53:46 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,7 @@ size_t	ft_strlen(const char *s)
 
 /* int	main(void)
 {
-	const char str[1000] = "Hello !";
-	printf("La chaine <<%s>> fait %zu carateres.\n", str, ft_strlen(str));
+	const char str[1000] = "Hello world !";
+	printf("The strings \"%s\" contains %zu characters.\n", str, ft_strlen(str));
 	return (0);
 } */
-
-/* NOTES TO SELF :
-- size_t is used for sizes & memory. Is is unsigned (no negative value). Plus,
-it adapts to the number of bits of the system (32 bits syst corresponds to a
-size_t that acts like a 32 bit unsigned int).
-*/

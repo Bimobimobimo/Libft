@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:42:03 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:12 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:49:37 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,28 +49,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	printf ("\n_______________STRLCAT____________________\n");
 	printf ("Strlcat : %zu, size : %zu\n", r, size);
 	if (size < r + 1)
-		printf ("String truncated, not fully concatenated : \n");
+		printf ("String truncated, not fully concatenated : ");
 	else 
 		printf ("String fully concatenated : ");
-	printf ("%s\n\n", dst);
+	printf ("\"%s\"\n\n", dst);
 	
 	printf ("____________FT_STRLCAT____________________\n");
 	printf ("Ft_strlcat : %zu, size : %zu\n", r2, size);
 		if (size < r2 + 1)
-		printf ("String truncated, not fully concatenated : \n");
+		printf ("String truncated, not fully concatenated : ");
 	else 
 		printf ("String fully concatenated : ");
-	printf ("%s\n\n", dst2);
+	printf ("\"%s\"\n\n", dst2);
 	
 	return 0;
 } */
-
-/* NOTES TO SELF :
-- size corresponds to the length of the final destination, after concatenation.
-- strlcat is used to know wether the concatenation is complete, by returning 
-the size of both strings (so the length of the final destination if 
-concatenation were complete) : this way, by comparing the returned number to
-size (length of final destination string), we know if the string is truncated.
-- size must be bigger than the returned value of ft_strlcat by 1, because of
-the terminating '\0' character.
-*/

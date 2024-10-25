@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:54:51 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:24 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 17:43:57 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	const char	big[100] = "Hello World !";
 	const char	little[100] = "lo";
 	size_t	len = 5;
-	printf ("ma fn : %s\n", ft_strnstr(big, little, len));
-	printf ("fn officielle : %s\n\n", strnstr(big, little, len));
+	printf ("Where \"%s\" starts in %zu char of \"%s\" :\n", little, len, big);
+	printf ("Ft_strnstr : %s\n", ft_strnstr(big, little, len));
+	printf ("Strnstr    : %s\n", strnstr(big, little, len));
 	return (0);
 } */

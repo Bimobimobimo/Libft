@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:06:14 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:05 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:24:46 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ int	ft_isalnum(int c)
 {
 	int u;
 
-	u = '9';
-	printf ("ft_isalnum : %d\n", ft_isalnum(u));
+	u = '@';
+	printf ("The char is '%c' : it ", u);
+	if (ft_isalnum(u))
+		printf ("is alphanumeric.\n");
+	else
+		printf ("is not alphanumeric.\n");
 	return (0);
 } */

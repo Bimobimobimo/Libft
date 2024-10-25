@@ -6,7 +6,7 @@
 #    By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 16:47:41 by lcollong          #+#    #+#              #
-#    Updated: 2024/10/21 16:17:09 by lcollong         ###   ########.fr        #
+#    Updated: 2024/10/25 18:28:15 by lcollong         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,18 +49,34 @@ SRCS = 	ft_atoi.c \
 		ft_striteri.c \
 		ft_putendl_fd.c
 
+SRCS_BONUS = 	ft_lstnew_bonus.c \
+				ft_lstadd_front_bonus.c \
+				ft_lstsize_bonus.c \
+				ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c
+
+			
+
 OBJS = ${SRCS:.c=.o}
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 all: ${NAME}
 
 ${NAME} : ${OBJS}
 	ar crs ${NAME} ${OBJS}
 
+bonus: ${OBJS} ${OBJS_BONUS}
+	ar crs ${NAME} ${OBJS} ${OBJS_BONUS}
+
 %.o : %.c
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:	
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 	rm -f ${NAME}

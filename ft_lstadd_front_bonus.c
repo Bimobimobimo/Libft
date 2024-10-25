@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 17:31:32 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/24 10:36:15 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/22 11:27:46 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/25 10:53:49 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	new->next = *lst;
+	*lst = new;
 }
 
 /* int	main(void)
 {
-	int		fd;
-	char	c;
-
-	fd = 1;
-	c = 'A';
-	ft_putchar_fd(c, fd);
+	t_list	*lst;
+	t_list	*new_elt;
+	
+	lst = ft_lstnew("Old element");
+	printf("First element before : %s\n", (char *)lst->content);
+	free(lst);
+	
+	new_elt = ft_lstnew("New element");
+	ft_lstadd_front(&lst, new_elt);
+	printf("First element after  : %s\n", (char *)lst->content);
+	free(new_elt);
+	
 	return (0);
 } */

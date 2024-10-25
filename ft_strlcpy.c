@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:23:40 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:15 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:03:29 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	char	dst[100] = "Hello world";
 	char	dst2[100] = "Hello world";
 	char	*src = "It's-a me, Mario !";
-	size_t	size = 0;
+	size_t	size = 19;
 
-	printf ("\n____________STRLCPY____________________\n");
 	printf ("Strlcpy    : %zu, %s\n", strlcpy(dst, src, size), dst);
-	printf ("Ft_strlcpy : %zu, %s\n\n", ft_strlcpy(dst2, src, size), dst2);
+	printf ("Ft_strlcpy : %zu, %s\n", ft_strlcpy(dst2, src, size), dst2);
 	return 0;
 } */

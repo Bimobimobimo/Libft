@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:22:46 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 15:59:45 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:28:16 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_bzero(void *s, size_t n)
 	char s[7] = "Hello !";
 	size_t	n = 2;
 	size_t	i = 0;
-	printf ("%s\n", s);
+	printf ("Before : %s\nAfter :\n", s);
 	ft_bzero(s, n);
 	while (i < 7)
 	{

@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 14:58:29 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/20 17:25:43 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 16:54:12 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,11 @@ char	*ft_itoa(int n)
 
 /* int	main(void)
 {
-	int		n = -1;
+	int		n = -2147483648;
 	char	*str_n;
 
 	str_n = ft_itoa(n);
-	printf ("n en chaine : %s\n", str_n);
+	printf ("%d en chaine : %s\n", n, str_n);
 	free (str_n);
 	return (0);	
 } */

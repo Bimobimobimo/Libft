@@ -6,17 +6,11 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:16:23 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/21 16:13:33 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 18:34:07 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* void	ft_test(unsigned int i, char *ptr_s)
-{
-	i = 0;
-	*ptr_s = 'h';
-} */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -30,11 +24,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-/* int	main(void)
+/* void	ft_test(unsigned int i, char *ptr_s)
+{
+	i = 0;
+	*ptr_s = 'a';
+}
+
+int	main(void)
 {
 	char	str[100] = "Hello";
-	printf ("<%s> devient : ", str);
+	printf ("\"%s\" becomes ", str);
 	ft_striteri(str, ft_test);
-	printf ("<%s>\n", str);
+	printf ("\"%s\"\n", str);
 	return (0);
 } */

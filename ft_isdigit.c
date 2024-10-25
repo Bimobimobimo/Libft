@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:05:09 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:15 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:18:02 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int	ft_isdigit(int c)
 {
 	int a;
 
-	a = '6';
-	printf("ft_isdigit : %d\n", ft_isdigit(a));
+	a = 'p';
+	printf ("The char '%c' ", a);
+	if (ft_isdigit(a))
+		printf ("is a digit.\n");
+	else
+		printf ("is not a digit.\n");
+	return (0);
 } */

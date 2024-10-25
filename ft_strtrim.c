@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 11:03:49 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/20 11:55:27 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 18:30:30 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /* int	main(void)
 {
-	const char	*s1 = "- -* \t ---";
+	const char	*s1 = "- -* Hello-world !\t ---";
 	const char	*set = "\t*- ";
 	char		*trim = ft_strtrim(s1, set);
 	printf ("%s\n", trim);
 	free(trim);
 	return (0);
 } */
-
-/* NOTES TO SELF
-
-- ft_substr(s1, i, (j-i+1)) will return a substring from s1, starting at
-index i, and of length (j-i+1). +1 bc i and j are indexes and we want a
-length.
-*/

@@ -6,18 +6,11 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:14:50 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/21 15:12:34 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:06:41 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* char	ft_f(unsigned int i, char c)
-{
-	c++;
-	i = 0;
-	return (c);
-} */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -37,17 +30,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_str);
 }
 
-/* int	main(void)
+/* char	ft_f(unsigned int i, char c)
 {
-	const char	*str = "Gdkkn";
+	c++;
+	i = 0;
+	return (c);
+}
+
+int	main(void)
+{
+	const char	*str = "abc012";
 	char		*result = ft_strmapi(str, ft_f);
-	printf ("resultat : %s\n", result);
+	printf ("Before : %s\nAfter : %s\n", str, result);
 	free(result);
 	return (0);
 } */
-
-/* NOTES TO SELF
-
-- char (*f) in the prototype : bc it is a pointer to a function that 
-returns a char, and not a function that return a pointer to char.
-*/

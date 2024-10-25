@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 18:13:20 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:01:06 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:37:55 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,13 @@ char	*ft_strdup(const char *s)
 
 /* int	main(void)
 {
-	const char	*s = "to duplicate";
+	const char	*s = "Hello !";
 	char	*dup;
 
 	dup = ft_strdup(s);
-	printf ("Original string   : %s\n", s);
-	printf ("Duplicated string : %s\n", dup);
+	printf ("Original string : %s\n", s);
+	printf ("After ft_strdup : %s\n", dup);
+	printf ("After strdup    : %s\n", strdup(s));
 	free(dup);
 	return (0);
 } */

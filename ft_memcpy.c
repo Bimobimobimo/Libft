@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:43:06 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:54 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:40:58 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	dest[100] = "HELLO";
 	char	*src = "BYEBYE";
-	size_t	n = 3;
+	size_t	n = 6;
 	
 	char	*result_officiel = memcpy(dest, src, n);
 	printf ("fn officielle : %s\n", result_officiel);

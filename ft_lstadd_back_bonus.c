@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 17:31:32 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/24 10:36:15 by lcollong         ###   ########.fr       */
+/*   Created: 2024/10/22 15:56:58 by lcollong          #+#    #+#             */
+/*   Updated: 2024/10/25 12:25:28 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	if (lst && new)
+	{
+		if (*lst == NULL)
+			*lst = new;
+		else
+			ft_lstlast(*lst)->next = new;
+	}
 }
 
 /* int	main(void)
 {
-	int		fd;
-	char	c;
+	t_list	*lst = ft_lstnew("Hello ");
+	t_list	*new = ft_lstnew("world !");
 
-	fd = 1;
-	c = 'A';
-	ft_putchar_fd(c, fd);
-	return (0);
+	ft_lstadd_back(&lst, new);
+	printf("Last element  : %s\n", (char *)ft_lstlast(lst)->content);
+	return(0);
 } */

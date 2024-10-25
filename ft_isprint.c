@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:49:12 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:20 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:23:43 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ int	ft_isprint(int c)
 	int c;
 
 	c = '\t';
+	printf ("The char '%c' ", c);
 	if (ft_isprint(c))
-		printf ("Is printable\n");
+		printf ("is printable.\n");
 	else
-		printf ("Is not printable\n");
+		printf ("is not printable.\n");
 	return (0);
 } */

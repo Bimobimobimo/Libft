@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:48:14 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 15:58:55 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:06:45 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,28 +41,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /* int	main(void)
 {
 	char	dest[21] = "Bimo le lapin";
-	char	*src = dest + 4;
-	size_t	n = 2;
+	char	*src = dest + 8;
+	size_t	n = 4;
 
-	printf ("____________MEMMOVE____________________");
+	printf ("___________MEMMOVE______________");
 	printf ("\nBefore 		 : %s\n", dest);
 
 	memmove(dest, src, n);
 	printf ("Memmove after    : %s\n", dest);
 
 	char	dest2[21] = "Bimo le lapin";
-	char	*src2 = dest2 + 4;
+	char	*src2 = dest2 + 8;
 	ft_memmove(dest2, src2, n);
 	printf ("Ft_memmove after : %s\n\n", dest2);
 
 	return 0;
 } */
-
-/* 
-NOTES TO SELF :
-
-Contrary to memcpy, memmove garanties to copy correctly even when the
-memory zones of dest and src overlap, by choosing the direction of the
-copy (left to right or right to left). If it did not, it would result 
-in a loss of the overlaping data of dest before the actual copying.
-*/

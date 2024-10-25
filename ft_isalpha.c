@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:05:04 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 16:00:08 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/23 15:03:56 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@ int	ft_isalpha(int c)
 
 /* int main()
 {
-	int car;
+	int u;
 
-	car = 'n';
-	printf ("ft_isalpha : %d\n", ft_isalpha(car));
+	u = 'k';
+	printf ("The char is '%c' : it ", u);
+	if (ft_isalpha(u))
+		printf ("is alphabetic.\n");
+	else
+		printf ("is not alphabetic.\n");
 	return (0);
 } */

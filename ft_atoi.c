@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 11:49:28 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/19 15:59:42 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:48:28 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,3 @@ int	ft_atoi(const char *nptr)
 	printf ("%s devient %d\n\n", str, f);
 	return 0;
 } */
-
-/* NOTES TO SELF :cc
-- atoi = ASCII to int.
-- while(*nptr...){...*nptr++...} : equals to while(nptr[i]...){i++} : it 
-increments nptr directly instead of i.
-- when there is an overflow > 18 digits to convert, atoi returns 0 or -1 
-depending on the sign : if > 0 it returns -1, else if < 0 it returns 0.
-*/
