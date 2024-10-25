@@ -6,7 +6,7 @@
 /*   By: lcollong <lcollong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:05:06 by lcollong          #+#    #+#             */
-/*   Updated: 2024/10/25 16:34:47 by lcollong         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:37:00 by lcollong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,14 @@ int	main(void)
 		printf("%s ", (char *)tmp->content);
 		tmp = tmp->next;
 	}
-	printf("\n");
-	lst->next = NULL;
-	ft_lstclear(&lst2, del);
+	printf("\nBecomes :\n");
+
+	ft_lstclear(&lst, del);
+	lst = NULL;
 	tmp = lst;
 	while (tmp)
 	{
-		printf("%s\n", (char *)lst->content);
+		printf("%s\n", (char *)tmp->content);
 		tmp = tmp->next;
 	}
 	return (0);
